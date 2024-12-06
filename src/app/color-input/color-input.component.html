@@ -1,0 +1,12 @@
+<div>
+  <label for="colorInput">
+    Código Hexadecimal del Color:
+  </label>
+  <input id="colorInput" type="text" 
+  [(ngModel)]="colorValue" 
+  placeholder="#FF5733" />
+  <button (click)="updateColor()">
+    Aplicar nuevo color
+  </button>
+</div>
+

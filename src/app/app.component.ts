@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ColorInputComponent } from './color-input/color-input.component';
+import { ColorButtonComponent } from './color-button/color-button.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [ColorInputComponent, ColorButtonComponent]
 })
 export class AppComponent {
-  title = 'ActividadLab1U1';
+  selectedColor: string = '#333333';
+
+  onColorChange(newColor: string) {
+    this.selectedColor = newColor; 
+  }
 }
